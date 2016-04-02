@@ -1,0 +1,115 @@
+[
+  {
+    "label": "ファイル",
+    "sub": [
+      { "label": "新規ファイル", "command": "session:new-file" },
+      { "label": "ファイルを開く...", "command": "session:open-file" },
+      { "label": "保存", "command": "session:save-file" },
+      { "label": "名前を付けて保存...", "command": "session:save-file-as" },
+      { "label": "すべて保存", "command": "session:save-all" },
+      { "label": "再読み込み", "command": "session:revert-file" },
+      { "label": "閉じる", "command": "session:close-tab" },
+      { "label": "印刷...", "command": "editor:print" },
+      { "label": "終了", "command": "app:exit" }
+    ]
+  },
+  {
+    "label": "編集",
+    "sub": [
+      { "label": "元に戻す", "command": "ace:command", "argument": "undo" },
+      { "label": "やり直し", "command": "ace:command", "argument": "redo" },
+      "divider",
+      { "label": "ファイルから挿入...", "command": "session:insert-from-file" },
+      { "label": "単語を選択", "command": "ace:command", "argument": "selectMoreAfter" },
+      { "label": "行を選択", "command": "ace:command", "argument": "expandtoline" },
+      { "label": "段落を選択", "command": "sublime:expand-to-paragraph" },
+      { "label": "カッコ内を選択", "command": "sublime:expand-to-matching" },
+      { "label": "折り返す", "command": "sublime:wrap" },
+      "divider",
+      { "label": "検索...", "command": "ace:command", "argument": "find" },
+      { "label": "置換...", "command": "ace:command", "argument": "replace" },
+      { "label": "次を検索", "command": "ace:command", "argument": "findnext" },
+      { "label": "プロジェクト内を検索...", "command": "searchbar:show-project-search", "retainFocus": true },
+      "divider",
+      { "label": "行コメントの切り替え", "command": "ace:command", "argument": "togglecomment" },
+      { "label": "ブロックコメントの切替え", "command": "ace:command", "argument": "toggleBlockComment" },
+      { "label": "タブをスペースに変換", "command": "sublime:tabs-to-spaces" },
+      { "label": "スペースをタブに変換", "command": "sublime:spaces-to-tabs" },
+      { "label": "改行コード",
+        "sub": [
+          { "label": "UNIX", "command": "ace:set-newline-mode", "argument": "unix" },
+          { "label": "Windows", "command": "ace:set-newline-mode", "argument": "windows" }
+        ]
+      },
+      { "label": "スペースを削除", "command": "ace:trim-whitespace" },
+      "divider",
+      { "label": "選択行を並び替え", "command": "ace:command", "argument": "sortlines" },
+      { "label": "選択行を統合", "command": "ace:command", "argument": "joinlines" },
+      { "label": "選択行を分離", "command": "ace:command", "argument": "splitline" },
+      { "label": "大文字に変換", "command": "ace:command", "argument": "touppercase" },
+      { "label": "子文字に変換", "command": "ace:command", "argument": "tolowercase" },
+      { "label": "選択行を上へ移動", "command": "ace:command", "argument": "movelinesup" },
+      { "label": "選択行を下へ移動", "command": "ace:command", "argument": "movelinesdown" }
+    ]
+  },
+  {
+    "label": "ツール",
+    "sub": [
+      { "label": "ファイルへ移動...", "command": "palette:open", "retainFocus": true },
+      { "label": "行へ移動...", "command": "palette:open", "argument": "line", "retainFocus": true },
+      { "label": "移動...", "command": "palette:open", "argument": "search", "retainFocus": true },
+      { "label": "参照元へ移動...", "command": "palette:open", "argument": "reference", "retainFocus": true },
+      { "label": "コマンドへ移動...", "command": "palette:open", "argument": "command", "retainFocus": true },
+      "divider",
+      { "label": "マクロ記録・停止", "command": "ace:togglemacro" },
+      { "label": "マクロ実行", "command": "ace:command", "argument": "replaymacro" },
+      { "label": "文字数カウント", "command": "editor:word-count" }
+    ]
+  },
+  {
+    "label": "プロジェクト",
+    "sub": [
+      { "label": "ディレクトリ登録...", "command": "project:add-dir" },
+      { "label": "ディレクトリ解除", "command": "project:remove-all" },
+      { "label": "ディレクトリ更新", "command": "project:refresh-dir" },
+      "divider",
+      { "label": "プロジェクト保存...", "command": "project:generate" },
+      { "label": "プロジェクト情報編集...", "command": "project:edit" },
+      { "label": "プロジェクトを開く...", "command": "project:open" },
+      { "label": "プロジェクトを閉じる", "command": "project:clear" }
+    ]
+  },
+  {
+    "label": "設定",
+    "sub": [
+      { "label": "環境設定...", "command": "session:open-settings-file", "argument": "user" },
+      { "label": "ショートカットキー...", "command": "session:open-settings-file", "argument": "keys" },
+      { "label": "メニュー...", "command": "session:open-settings-file", "argument": "menus" },
+      { "label": "外部コマンド...", "command": "session:open-settings-file", "argument": "api" },
+      { "label": "テーマ...", "command": "session:open-settings-file", "argument": "theme" },
+      "divider",
+      { "label": "デフォルト設定を確認する",
+        "sub": [
+          { "label": "環境設定...", "command": "session:open-settings-defaults", "argument": "user", "palette": "menuUserPrefsDefault" },
+          { "label": "ショートカットキー...", "command": "session:open-settings-defaults", "argument": "keys", "palette": "menuKeyboardDefault" },
+          { "label": "メニュー...", "command": "session:open-settings-defaults", "argument": "menus", "palette": "menuMenusDefault" },
+          { "label": "テーマ...", "command": "session:open-settings-defaults", "argument": "theme", "palette": "menuThemeDefault" }
+        ]
+      },
+      { "label": "設定をリセット",
+        "sub": [
+          { "label": "環境設定", "command": "settings:delete-local", "argument": "user", "palette": "menuResetUserPrefs" },
+          { "label": "ショートカットキー", "command": "settings:delete-local", "argument": "keys", "palette": "menuResetKeyboard" },
+          { "label": "メニュー", "command": "settings:delete-local", "argument": "menus", "palette": "menuResetMenus" },
+          { "label": "テーマ", "command": "settings:delete-local", "argument": "theme", "palette": "menuResetTheme" },
+          "divider",
+          { "label": "初期化", "command": "settings:emergency-reset" }
+        ]
+      },
+      "divider",
+      { "label": "ヘルプ", "command": "app:browse", "argument": "https:\/\/github.com\/thomaswilburn\/Caret\/wiki" },
+      { "label": "更新を確認", "command": "app:check-for-updates", "argument": "manual" },
+      { "label": "Caretについて", "command": "app:about", "retainFocus": true }
+    ]
+  }
+]
